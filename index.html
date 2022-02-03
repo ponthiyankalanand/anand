@@ -1,1 +1,84 @@
-<h1>hai, this is Anand </h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.btn {
+		  border: 2px solid black;
+		  background-color: white;
+		  color: black;
+		  padding: 14px 28px;
+		  font-size: 16px;
+		  cursor: pointer;
+		}
+		.success:hover {
+  			background-color: #04AA6D;
+  			color: white;
+		}
+		.red {
+  			background-color: red;
+  			color: white;
+		}
+		.center{
+			padding-top: 70px;
+
+		}
+ 
+	</style>
+</head>
+<body>
+	<audio id="myAudio">
+	  <source src="https://designshack.net/tutorialexamples/html5-audio-player/media/evidence-song.mp3" preload="metadata" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio>
+	<div class="center">
+		<center>
+		<h1>Hellow People !</h1>
+		<u>Welcome to Anand Rajan Github Page</u><br/><br/>
+		<button class="btn success" onclick="playAudio(),myFunction('pause')">&#129409;</button>
+		<button class="btn success">YouTube</button>
+		<button class="btn success" onclick="myFunction('about')">About</button>
+		<button class="btn success" onclick="myFunction('contact')">Contact</button>
+		<div id="about">
+			<p>I am a software Engineer, Working as Implemetaion engineer in a telecom company based on Bangalore. I would love to do traveling, Videography, Adventure etc...</p>
+		</div><br/>
+		<div id="contact">
+		<p><a href="mailto:ponthiyankalanand@gmail.com">Send email</a></p>
+		</div><br>
+		<div id="pause">
+		<button class="btn red" onclick="pauseAudio()">Pause Audio</button>
+		</div>
+		</center>
+	</div>
+	<script>
+		var x = document.getElementById("contact");
+		x.style.display = "none";
+		var y = document.getElementById("about");
+		y.style.display = "none";
+		var a = document.getElementById("pause");
+		a.style.display = "none";
+		function myFunction(idval) {
+		  var x = document.getElementById(idval);
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+
+		var z = document.getElementById("myAudio"); 
+		function playAudio() { 
+  		z.play(); 
+		} 
+		function pauseAudio() { 
+  		z.pause(); 
+  		document.getElementById("pause").style.display="none";
+		}
+	</script>
+</body>
+</html>
+
+
+
+
