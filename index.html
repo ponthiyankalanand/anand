@@ -49,9 +49,12 @@
 			  <!--<a href="https://github.com/ponthiyankalanand">Github.com</a>-->
 		<br/><br/>
 		<button class="btn success" onclick="playAudio(),myFunction('pause')">&#129409;</button>
-		<button class="btn success">YouTube</button>
+		<button class="btn success" onclick="myFunction('youtube')">YouTube</button>
 		<button class="btn success" onclick="myFunction('about')">About</button>
 		<button class="btn success" onclick="myFunction('contact')">Contact</button>
+		<div id="youtube">
+			<a href="https://www.youtube.com/channel/UCBKyjygHx5BehddH7rgDmOg/videos">Tech Channel</a>
+		</div>	
 		<div id="about">
 			<p>I am a software Engineer, Working as an Implemetaion engineer in a telecom company based on Bangalore. I would love to do traveling, Videography, Adventure etc...</p>
 			<br/><a href="https://drive.google.com/file/d/1vADCgtIEpBxNfdLm-chDDSn3_ly3LfB8/view?usp=sharing"> Resume </a><br>
@@ -68,6 +71,8 @@
 		</center>
 	</div>
 	<script>
+		var x = document.getElementById("youtube");
+		x.style.display = "none";
 		var x = document.getElementById("contact");
 		x.style.display = "none";
 		var y = document.getElementById("about");
